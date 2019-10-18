@@ -1,0 +1,45 @@
+/* ------------------------------------------------------------ *\
+	Weather
+\* ------------------------------------------------------------ */
+
+.weather {
+	text-align: center;
+	font-family: $font-two;
+	font-size: 2rem;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.3);
+	padding: 3rem;
+	border-radius: 3rem;
+	width: 50rem;
+	height: 35rem;
+
+	.weather {
+		&__icon {
+			margin: 2rem 0;
+		}
+
+		&__temp {
+			font-size: 4rem;
+		}
+
+		&__location {
+			font-size: 3rem;
+		}
+	}
+
+	@media #{$mobile} {
+		width: 100%;
+		height: auto;
+
+		canvas {
+			width: 100px;
+			height: 100px;
+		}
+
+		.weather {
+			&__location {
+				font-size: 2rem;
+			}
+		}
+	}
+}

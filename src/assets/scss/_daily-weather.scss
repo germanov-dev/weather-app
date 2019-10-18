@@ -1,0 +1,63 @@
+/* ------------------------------------------------------------ *\
+	Daily Weather
+\* ------------------------------------------------------------ */
+
+.daily-weathers {
+	margin-top: 3rem;
+	background: rgba(0, 0, 0, 0.3);
+	padding: 3rem;
+	border-radius: 3rem;
+	display: flex;
+	color: #fff;
+	font-family: $font-two;
+
+	.daily-weather {
+		text-align: center;
+
+		& + .daily-weather {
+			margin-left: 2rem;
+		}
+	}
+
+	@media #{$tablet-portrait} {
+		justify-content: center;
+		flex-wrap: wrap;
+
+		.daily-weather {
+			width: 25%;
+			margin-bottom: 5rem;
+
+			& + .daily-weather {
+				margin-left: 0;
+			}
+		}
+	}
+
+	@media #{$mobile} {
+		.daily-weather {
+			width: 100%;
+		}
+	}
+}
+
+.daily-weather {
+	padding: 0 1rem;
+
+	canvas {
+		margin: 1rem 0;
+	}
+
+	.daily-weather {
+		&__day {
+			font-weight: 900;
+		}
+
+		&__temp {
+			font-size: 2rem;
+		}
+
+		&__summary {
+			margin-top: 1rem;
+		}
+	}
+}

@@ -1,0 +1,77 @@
+/* ------------------------------------------------------------ *\
+	Splash Screen
+\* ------------------------------------------------------------ */
+
+.splash-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+	// background: #aa4b6b;
+	// background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.4s;
+	background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+
+	h1 {
+		font-size: 13rem;
+		font-weight: 400;
+		font-family: $font-one;
+		color: #fff;
+		position: relative;
+
+		&:after {
+			content: attr(data-shadow);
+			position: absolute;
+			top: 1rem;
+			left: 1rem;
+			z-index: -1;
+			text-shadow: none;
+			white-space: nowrap;
+			background-image: linear-gradient(
+				45deg,
+				transparent 45%,
+				rgba(0, 0, 0, 1) 45%,
+				rgba(0, 0, 0, 1) 55%,
+				transparent 0
+			);
+			background-size: 0.05em 0.05em;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+
+			animation: shad-anim 15s linear infinite;
+		}
+	}
+
+	&.hide {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	@media #{$tablet-portrait} {
+		h1 {
+			font-size: 10rem;
+		}
+	}
+
+	@media #{$mobile} {
+		h1 {
+			font-size: 6rem;
+		}
+	}
+}
+
+@keyframes shad-anim {
+	0% {
+		background-position: 0 0;
+	}
+	0% {
+		background-position: 100% -100%;
+	}
+}

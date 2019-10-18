@@ -1,0 +1,14 @@
+/* ------------------------------------------------------------ *\
+	Container
+\* ------------------------------------------------------------ */
+
+.container {
+	max-width: $container-max-width + $container-gutter * 2;
+	padding-right: $container-gutter;
+	padding-left: $container-gutter;
+	margin: auto;
+
+	&--fluid {
+		max-width: none;
+	}
+}

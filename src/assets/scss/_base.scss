@@ -1,0 +1,32 @@
+/* ------------------------------------------------------------ *\
+	Base
+\* ------------------------------------------------------------ */
+
+html {
+	font-size: 10px;
+
+	@media #{$mobile} {
+		font-size: 8px;
+	}
+}
+
+body {
+	min-width: 320px;
+	font-family: $font-family-sans-serif;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: #000;
+
+	background: #aa4b6b;
+	background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+}
+
+a {
+	color: inherit;
+	text-decoration: underline;
+
+	&:hover,
+	&[href^='tel'] {
+		text-decoration: none;
+	}
+}
