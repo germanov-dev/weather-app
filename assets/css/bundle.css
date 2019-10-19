@@ -265,6 +265,10 @@ a:hover, a[href^='tel'] {
   padding: 2rem; }
 .wrapper .footer {
     margin-top: auto; }
+@media (max-width: 767px) {
+    .wrapper {
+      height: auto;
+      min-height: 100vh; } }
 /* ------------------------------------------------------------ *\
 	Container
 \* ------------------------------------------------------------ */
