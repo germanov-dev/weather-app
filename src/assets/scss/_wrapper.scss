@@ -14,4 +14,9 @@
 	.footer {
 		margin-top: auto;
 	}
+
+	@media #{$mobile} {
+		height: auto;
+		min-height: 100vh;
+	}
 }
