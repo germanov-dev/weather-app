@@ -5,4 +5,4 @@
 
 Simple Weather App using Vanilla JS and Dark Sky API.
 
-[Demo](https://germanov.js.org/weather-app)
+[Check the weather!](https://germanov.js.org/weather-app)
